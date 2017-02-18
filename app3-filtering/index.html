@@ -1,6 +1,10 @@
-<html>
-	<body>
-		Something
+<html ng-app="myApp">
+	<body ng-controller="myCont">
+
+		<input type="text" name="filter" placeholder="Filter..." ng-model="namesFilter">
+		<div class="names" ng-repeat="each in names | filter: namesFilter">
+			{{each.name}}
+		</div>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
