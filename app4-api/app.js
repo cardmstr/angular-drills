@@ -1,1 +1,1 @@
-angular.module('apiApp',[]);
+angular.module('apiApp',['ui.router']);
