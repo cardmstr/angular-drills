@@ -1,9 +1,17 @@
 <html ng-app="apiApp">
-	<body>
-		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
+	<body ng-controller="myCont">
+
+		<div class="main-content">
+			<input type="text" name="searchPoke" placeholder="Search Pokemon" ng-model="pokeFilter">
+
+			<div class="listPokemon" ng-repeat="pokemon in pokeList | filter: pokeFilter">
+				{{pokemon.name}}
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="./app.js"></script>
+		<script src="./controller.js"></script>
+		<script src="./service.js"></script>
 	</body>
 </html>
